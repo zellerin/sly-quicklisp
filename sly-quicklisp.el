@@ -45,7 +45,9 @@ in `sly-editing-mode-hook', i.e. lisp files."
   "Known enabled quicklisp dists")
 
 (defun sly-quickload (system)
-  "Interactive command made available in lisp-editing files."
+  "Load quicklisp system.
+
+Interactively, prompt for the system. With prefix, offer local systems."
   (interactive
    (list (sly-completing-read "QL system? "
                               (sly-eval
